@@ -22,12 +22,15 @@ body {
 }
 
 .dropdown-menu {
-	width: 80px;
-	margin-left: calc(50% - 80px) !important;
+	width: 280px;
+	margin-left: calc(50% - 140px) !important;
 	margin-right: auto !important;
-	text-align: center !important;
+	text-align: justify !important;
 }
 
+.dropdown-menu a:hover{
+	font-weight: bold;
+}
 
 .dropdown ul li{
 
