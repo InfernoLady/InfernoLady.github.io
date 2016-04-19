@@ -11,11 +11,12 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="imagepopup.css">
     <link href="bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-
-   
+    <!-- Magnific Popup core CSS file -->
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="dist/magnific-popup.css">
   </head>
   <body style="background-color:rgba(217, 217, 217, 0.8);">
     <div style="height: 80px;">
@@ -85,7 +86,7 @@
         <div class="col-md-8 col-md-offset-2" style="border-top: rgba(155, 155, 155, 0.5) solid 1px; padding-bottom:90px;"></div>
         <div class="col-md-6" style="padding-bottom:-130px;">
           <center>
-            <a href="images/marina.jpg" target="_blank"><img class="img-circle" src="images/marina.jpg" alt="Generic placeholder image" width="200" height="200"></a>
+            <a href="#" data-toggle="lightbox"><img class="img-circle" src="images/marina.jpg" alt="Generic placeholder image" width="200" height="200"></a>
             <h2><a id="Marina">Marina Kovač</a></h2>
             <p></p>
             <p><a class="btn btn-success" href="#" role="button">Što me dijeli od željene djelatnosti? &raquo;</a></p>
@@ -93,28 +94,53 @@
         </div>
         <div class="col-md-6">
           <center>
-            <a href="images/marko.jpg" target="_blank"><img class="img-circle" src="images/marko.jpg" alt="Generic placeholder image" width="200" height="200"></a>
+            <a href="images/marko.jpg" data-toggle="lightbox"><img class="img-circle" src="images/marko.jpg" alt="Generic placeholder image" width="200" height="200"></a>
             <h2><a id="Marko">Marko Bilić</a></h2>
             <p></p>
             <p><a class="btn btn-success" href="#" role="button">Što me dijeli od željene djelatnosti? &raquo;</a></p>
           </center>
         </div>
         
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="markomod" role="dialog">
         <div class="modal-dialog" style="margin-top:150px;">
           <div class="modal-content">
             <div class="modal-header" style="padding:15px 20px;">
               <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-lg" aria-hidden="true" style="color:#e63900;"></i></button>
-              <h4><i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;Podaci o studentu</h4>
+              <h4><img src="images/male.gif" style="height:50px; width:50px; margin-right:15px;">Podaci o studentu</h4>
             </div>
             <div class="modal-body" style="padding:20px 30px;">
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="ime"</span>Ime:</label>&nbsp;&nbsp;Marko<br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="prez"></span>Prezime:</label>&nbsp;&nbsp;Bilić<br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="rodj"></span>Mjesto rođenja:</label>&nbsp;&nbsp;<a href="http://www.pozega.hr/" target="_blank">Požega</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="god"</span>Godina rođenja:</label>&nbsp;&nbsp;23.03.1994.<br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="preb"></span>Prebivalište:</label>&nbsp;&nbsp;<a href="http://www.osijek.hr/" target="_blank">Osijek</a><br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="osn"></span>Osnovna škola:</label>&nbsp;&nbsp;<a href="http://os-akanizlica-pozega.skole.hr/" target="_blank">OŠ Antuna Kanižlića Požega</a><br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="sred"></span>Srednja škola:</label>&nbsp;&nbsp;<a href="http://www.tehnickaskola.net/" target="_blank">Tehnička škola Požega</a><br>
               <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="faks"></span>Fakultet:</label>&nbsp;&nbsp;<a href="https://www.etfos.hr/" target="_blank">Elektrotehnički fakultet Osijek</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="index"</span>Br. Indeksa:</label>&nbsp;&nbsp;AI4326<br>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="modal fade" id="marinamod" role="dialog">
+        <div class="modal-dialog" style="margin-top:150px;">
+          <div class="modal-content">
+            <div class="modal-header" style="padding:15px 20px;">
+              <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-lg" aria-hidden="true" style="color:#e63900;"></i></button>
+              <h4><img src="images/female.png" style="height:40px; width:40px; margin-right:15px;">Podaci o studentu</h4>
+            </div>
+            <div class="modal-body" style="padding:20px 30px;">
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="ime"</span>Ime:</label>&nbsp;&nbsp;Marina<br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="prez"></span>Prezime:</label>&nbsp;&nbsp;Kovač<br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="rodj"></span>Mjesto rođenja:</label>&nbsp;&nbsp;<a href="http://www.kbo.hr/" target="_blank">KBC Osijek</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="god"</span>Godina rođenja:</label>&nbsp;&nbsp;15.10.1994.<br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="preb"></span>Prebivalište:</label>&nbsp;&nbsp;<a href="http://www.osijek.hr/" target="_blank">Osijek</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="osn"></span>Osnovna škola:</label>&nbsp;&nbsp;<a href="http://os-ifilipovica-os.skole.hr/" target="_blank">OŠ Ivana Filipovića</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="sred"></span>Srednja škola:</label>&nbsp;&nbsp;<a href="http://gimnazija-prva-os.skole.hr/" target="_blank">I. gimnazija Osijek</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="faks"></span>Fakultet:</label>&nbsp;&nbsp;<a href="https://www.etfos.hr/" target="_blank">Elektrotehnički fakultet Osijek</a><br>
+              <i class="fa fa-terminal" aria-hidden="true"></i>&nbsp;<label for="index"</span>Br. Indeksa:</label>&nbsp;&nbsp;AI4277<br>
             </div>
             <div class="modal-footer"></div>
           </div>
@@ -141,9 +167,22 @@
       $(document).ready(function(){
         $("#sticker").sticky({topSpacing:0});
           $("#Marko").click(function(){
-            $("#myModal").modal();
+            $("#markomod").modal();
           });
         });
+
+      $(document).ready(function(){
+        $("#sticker").sticky({topSpacing:0});
+          $("#Marina").click(function(){
+            $("#marinamod").modal();
+          });
+        });
+
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      }); 
+
     </script>
   </body>
 </html>
