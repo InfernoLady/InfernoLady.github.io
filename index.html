@@ -14,8 +14,6 @@
     <link rel="stylesheet" type="text/css" href="imagepopup.css">
     <link href="bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Magnific Popup core CSS file -->
-    <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="dist/magnific-popup.css">
   </head>
   <body style="background-color:rgba(217, 217, 217, 0.8);">
@@ -84,9 +82,9 @@
 
       <div class="row" style="margin:0px;">
         <div class="col-md-8 col-md-offset-2" style="border-top: rgba(155, 155, 155, 0.5) solid 1px; padding-bottom:90px;"></div>
-        <div class="col-md-6" style="padding-bottom:-130px;">
+        <div class="col-md-6" style="margin-bottom:100px;">
           <center>
-            <a href="#" data-toggle="lightbox"><img class="img-circle" src="images/marina.jpg" alt="Generic placeholder image" width="200" height="200"></a>
+            <a href="#" id="MarinaPic"><img class="img-circle" src="images/marina.jpg" alt="Generic placeholder image" width="200" height="200"></a>
             <h2><a id="Marina">Marina Kovač</a></h2>
             <p></p>
             <p><a class="btn btn-success" href="#" role="button">Što me dijeli od željene djelatnosti? &raquo;</a></p>
@@ -94,7 +92,7 @@
         </div>
         <div class="col-md-6">
           <center>
-            <a href="images/marko.jpg" data-toggle="lightbox"><img class="img-circle" src="images/marko.jpg" alt="Generic placeholder image" width="200" height="200"></a>
+            <a href="#" id="MarkoPic"><img class="img-circle" src="images/marko.jpg" alt="Generic placeholder image" width="200" height="200"></a>
             <h2><a id="Marko">Marko Bilić</a></h2>
             <p></p>
             <p><a class="btn btn-success" href="#" role="button">Što me dijeli od željene djelatnosti? &raquo;</a></p>
@@ -145,6 +143,22 @@
             <div class="modal-footer"></div>
           </div>
         </div>
+      </div>
+
+      <div class="modal fade" id="marinamodPic" role="dialog">
+        <div class="modal-dialog" style="margin-top:150px; margin-left: calc(50% - 380px);">
+          <div class="modal-content">
+            <img src="images/Marina.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="markomodPic" role="dialog">
+        <div class="modal-dialog" style="margin-top:150px; margin-left: calc(50% - 270px);">
+          <div class="modal-content">
+            <img src="images/Marko.jpg">
+          </div>
+        </div>
       </div> 
 
 
@@ -166,17 +180,19 @@
     <script>
       $(document).ready(function(){
         $("#sticker").sticky({topSpacing:0});
-          $("#Marko").click(function(){
-            $("#markomod").modal();
-          });
+        $("#Marko").click(function(){
+          $("#markomod").modal();
         });
-
-      $(document).ready(function(){
-        $("#sticker").sticky({topSpacing:0});
-          $("#Marina").click(function(){
-            $("#marinamod").modal();
-          });
+        $("#Marina").click(function(){
+          $("#marinamod").modal();
         });
+        $("#MarinaPic").click(function(){
+          $("#marinamodPic").modal();
+        });
+        $("#MarkoPic").click(function(){
+          $("#markomodPic").modal();
+        });
+      });
 
       $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
         event.preventDefault();
