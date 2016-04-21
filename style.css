@@ -77,10 +77,9 @@ body {
 }
 
 #footer{
-	clear:both;
-	height: 130px;
-	position: absolute !important;
-	bottom: auto;
+ clear:both;
+ height: 130px;
+ position: bottom;
 }
 
 #footer p{
@@ -97,6 +96,8 @@ body {
 	text-decoration: none;
 	color: #3e8e41;
 	font-weight: bold;
+	font-size: 16px;
+	
 }
 
 #prazno{
@@ -116,27 +117,40 @@ h1,h4{
 }
 
 
-.prva p, h3{
+.prva p{
 	padding-top: 10px;
-	padding-left: 370px;
 }
 
-.col-md-8 h3{
+.prva h3{
+	padding-top: 10px;
+}
+
+.col-md-6 h3{
 	color: #4CAF50;
 }
 
 .druga p{
 	padding-top: 10px;
-	padding-right: 370px;
+}
+
+.druga a{
+	font-weight: bold;
+	text-decoration: none;
+	color:#000000;
+}
+
+.druga a:hover{
+	font-weight: bold;
+	text-decoration: none;
+	color: #4CAF50;
 }
 
 
 .treca p{
-	padding-top: 60px;
-	padding-left: 370px;
+	padding-top: 10px;
 }
 
-.col-md-8 i{
+.col-md-6 i{
 	color: #4CAF50;
 }
 
@@ -150,7 +164,7 @@ h1,h4{
 	text-decoration: none;
 }
 
-.col-md-6 img:hover{
+.profil:hover{
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%); /* For Webkit browsers */
 	filter: gray; /* IE 6 - 9 */
@@ -177,3 +191,19 @@ h1,h4{
 	color: #4CAF50;
 }
 
+.col-sm-6 a{
+	text-decoration: none;
+	color: #4CAF50;
+}
+
+.col-sm-6 a:hover{
+	text-decoration: none;
+	color: #4CAF50;
+	font-weight: bold;
+}
+
+.linkanje a:hover{
+	text-decoration:none; 
+	color:#4CAF50;
+	font-weight: bold;
+}
